@@ -52,22 +52,12 @@ public class Utilities{
         
         //Check if master preset has been added
         if(masterModsDict.Count == 0){
-            Console.WriteLine("You must add a master list first!");
-            Console.WriteLine("Press Enter to return to the menu...");
+            Console.WriteLine("Master mod list not found!");
+            Console.WriteLine("Press Enter to exit...");
             Console.ReadLine();
             return false;
         }
-
-        Console.WriteLine("\nPlease add all preset files currently in use to the 'Presets' folder inside this programs folder.");
-        Console.WriteLine(@"
-Quick guide:
-        1. Gather up all preset files in use by all communities you play in.
-        2. Copy them to the folder 'A3_Modpack_Parser/Presets/'
         
-NOTE: ENSURE THERE ARE NO OTHER HTML FILES PRESENT IN THE SAME FOLDER, EXCEPT FOR ARMA PRESETS YOU WISH TO INPUT
-        ");
-        Console.Write("Press Enter to continue...");
-        Console.ReadLine();
         try{
             string[] fileList = Directory.GetFiles(Path.GetFullPath("Presets"),"*.html");
 
@@ -102,18 +92,6 @@ NOTE: ENSURE THERE ARE NO OTHER HTML FILES PRESENT IN THE SAME FOLDER, EXCEPT FO
     public Dictionary<string,string> masterModsDict = new Dictionary<string,string>();
     public bool CreateMasterList(){
         
-        Console.WriteLine("\nPlease save a preset file named 'master' that includes all mods you have subscribed to, to the 'FullMods' folder in this programs folder.");
-        Console.WriteLine(@"
-Quick guide:
-        1. Launch the Arma 3 Launcher and go into the 'Mods' tab.
-        2. Press the 'More' button above the list.
-        3. Select 'Export a list of mods to a file', and in the next window press 'All mods'.
-        4. Name the file as 'master.html'.
-        5. Save or move the file into the 'A3_Modpack_Parser/FullMods' folder.
-        ");
-        Console.Write("Press Enter to continue...");
-        Console.ReadLine();
-
         masterModsDict.Clear(); // Empty out any previous items, just to keep things simpler in case user does the process multiple times.
 
         try{
@@ -127,9 +105,6 @@ Quick guide:
                     Console.WriteLine("Mod '" + i.Key + "' already seen, skipping...");
                 }
             }
-            Console.WriteLine("Master list successfully added.");
-            Console.WriteLine("Press Enter to return to the menu.");
-            Console.ReadLine();
             return true;
         }catch(Exception e){
             Console.WriteLine("Bad HTML file detected. Full error: " + e);
@@ -166,10 +141,6 @@ Quick guide:
         // }
         sw.WriteLine(htmlContent);
         sw.Close();
-
-        Console.WriteLine("Preset file 'unsubscribable.html' was created in the program folder. Import it to the A3 launcher and you can unsubscribe all mods active in it.");
-        Console.Write("Press Enter to return to the main menu.");
-        Console.ReadLine();
 
     }
 
