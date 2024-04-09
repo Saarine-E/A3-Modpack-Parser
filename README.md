@@ -2,7 +2,7 @@
 Utility program for parsing through Arma 3 modpacks and finding unused mods that can be unsubscribed from the Steam Workshop.
 
 ## Installation guide for non-Github users
-1. At the right hand side select the newest release to download
+1. At the right hand side select the latest release, and download the .zip file.
 2. Unzip the files wherever you want.
 3. Follow the user guide below.
 
