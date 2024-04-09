@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "z16ZfZSqUBXXUkKfhogaWJGrbf/aCU+bVt1VZy2I8Bm+2LcXb017vnzX2Xk+ZJH/vZsDf1qSTJ6gzs0KLfE+pg==",
+  "success": true,
+  "projectFilePath": "C:\\Koodit\\A3_Modpack_Parser\\A3_Modpack_Parser.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sieni\\.nuget\\packages\\htmlagilitypack\\1.11.60\\htmlagilitypack.1.11.60.nupkg.sha512"
+  ],
+  "logs": []
+}
