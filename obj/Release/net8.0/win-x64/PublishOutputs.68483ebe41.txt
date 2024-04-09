@@ -1,2 +1,0 @@
-C:\Koodit\A3_Modpack_Parser\bin\Release\net8.0\win-x64\publish\A3_Modpack_Parser.pdb
-C:\Koodit\A3_Modpack_Parser\bin\Release\net8.0\win-x64\publish\A3_Modpack_Parser.exe
